@@ -2,13 +2,13 @@ import Avatar from "@/components/Avatar";
 import { useDeColors } from "@/hooks/DeColors";
 import { AntDesign } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { StatusBar } from 'expo-status-bar';
 import React from "react";
 import { View } from "react-native";
 
 export default function RootLayout() {
-  return (
+  return (<>
     <Tabs screenOptions={{ headerShown: false }}>
-      <Statusbar />
       <Tabs.Screen
         name="Home"
         options={{
@@ -42,5 +42,7 @@ export default function RootLayout() {
       <Tabs.Screen name="Booking" options={{}} />
       <Tabs.Screen name="Profile" options={{}} />
     </Tabs>
+    <StatusBar />
+  </>
   );
 }

@@ -15,7 +15,6 @@ const Home = () => {
         backgroundColor: useDeColors().backgroundColor,
       }}
     ><LinearGradient
-        // Background Linear Gradient
         colors={[useDeColors().tintColor, 'transparent']}
         style={{
           position: 'absolute',
@@ -25,7 +24,7 @@ const Home = () => {
           height: 500
         }}
       />
-\      <View style={{ flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 10 }}>
+       <View style={{ flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 10 }}>
         <SearchInputField />
         <FilterButton />
       </View>
