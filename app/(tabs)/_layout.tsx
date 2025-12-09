@@ -1,6 +1,6 @@
 import Avatar from "@/components/Avatar";
 import { useDeColors } from "@/hooks/DeColors";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { StatusBar } from 'expo-status-bar';
 import React from "react";
@@ -37,10 +37,22 @@ export default function RootLayout() {
             </View>
           ),
           headerRight: () => <Avatar />,
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="home" size={size} color={color} />
+          )
         }}
       />
-      <Tabs.Screen name="Booking" options={{}} />
-      <Tabs.Screen name="Profile" options={{}} />
+      <Tabs.Screen name="Booking" options={{
+        tabBarIcon: ({ color, size }) => (
+          <AntDesign name="book" size={size} color={color} />
+        )
+      }} />
+      <Tabs.Screen name="Profile" options={{
+        tabBarIcon: ({ color, size }) => (
+          <Feather name="user" size={size} color={color} />
+
+        )
+      }} />
     </Tabs>
     <StatusBar />
   </>

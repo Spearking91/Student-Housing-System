@@ -1,11 +1,14 @@
 import { FontAwesome } from '@expo/vector-icons'
 import { Image } from 'expo-image'
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-const PostTile = () => {
+type props ={
+  onPress: () => void;
+}
+const PostTile = ({onPress}:props) => {
   return (
-    <View style={{ backgroundColor: '#fff', height: 350, borderRadius: 20, width: '100%', }}>
+    <TouchableOpacity onPress={onPress} style={{ backgroundColor: '#fff', height: 350, borderRadius: 20, width: '100%', }} >
       <View style={{ flex: 2, borderRadius: 20, backgroundColor: 'pink', overflow: 'hidden' }}>
         <Image source={require('../assets/images/home.jpeg')} contentFit='cover' style={{ width: '100%', height: '100%' }} />
       </View>
@@ -21,7 +24,7 @@ const PostTile = () => {
         </View>
       </View>
 
-    </View>
+    </TouchableOpacity>
   )
 }
 

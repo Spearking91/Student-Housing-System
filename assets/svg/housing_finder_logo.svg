@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Housing finder logo">
+  <!-- Transparent background by default -->
+  <!-- Teal color -->
+  <defs>
+    <style>
+      .teal { fill: #16B2B2; }
+      .teal-stroke { fill: none; stroke: #16B2B2; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+      .white { fill: white; }
+    </style>
+  </defs>
+
+  <!-- House outline (rounded corners) -->
+  <g transform="translate(0, -8)">
+    <path class="teal" d="M128 416 L512 160 L896 416 V800 A48 48 0 0 1 848 848 H176 A48 48 0 0 1 128 800 Z" />
+
+    <!-- Doorway / base inner rounded rectangle for a softer look -->
+    <rect x="216" y="496" width="592" height="304" rx="36" ry="36" class="teal" />
+
+    <!-- Location pin centered inside the house -->
+    <g transform="translate(0,20)">
+      <!-- Pin teardrop -->
+      <path class="white" d="M512 320
+           C468 320 432 356 432 400
+           C432 496 512 640 512 640
+           C512 640 592 496 592 400
+           C592 356 556 320 512 320 Z" />
+      <!-- Pin outline to match teal fill (thin) -->
+      <path class="teal-stroke" d="M512 320
+           C468 320 432 356 432 400
+           C432 496 512 640 512 640
+           C512 640 592 496 592 400
+           C592 356 556 320 512 320 Z" />
+
+      <!-- Two friendly people inside the pin -->
+      <!-- Left (slightly smaller, offset) -->
+      <circle cx="470" cy="420" r="28" class="teal" />
+      <path class="teal" d="M440 476
+           Q470 516 500 476
+           Q470 504 440 476 Z" />
+
+      <!-- Right (slightly larger, main) -->
+      <circle cx="554" cy="408" r="36" class="teal" />
+      <path class="teal" d="M520 468
+           Q554 520 588 468
+           Q554 496 520 468 Z" />
+    </g>
+
+    <!-- Soft inner stroke around house to add separation -->
+    <path class="teal-stroke" d="M128 416 L512 160 L896 416 V800 A48 48 0 0 1 848 848 H176 A48 48 0 0 1 128 800 Z" />
+  </g>
+</svg>

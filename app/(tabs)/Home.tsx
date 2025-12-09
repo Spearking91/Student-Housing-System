@@ -3,6 +3,7 @@ import PostTile from "@/components/PostTile";
 import SearchInputField from "@/components/SearchInputField";
 import { useDeColors } from "@/hooks/DeColors";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
@@ -24,13 +25,13 @@ const Home = () => {
           height: 500
         }}
       />
-       <View style={{ flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 10 }}>
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 12, marginBottom: 10 }}>
         <SearchInputField />
         <FilterButton />
       </View>
 
-      <FlatList data={[{ id: 1 }, { id: 2 }]} contentContainerStyle={{ gap: 20 }} renderItem={() => (
-        <PostTile />
+      <FlatList data={[{ id: 1 }, { id: 2 }]} contentContainerStyle={{ gap: 20, paddingTop: 5 }} renderItem={() => (
+        <PostTile onPress={()=>router.push('/ProductPage') } />
       )} />
 
 
