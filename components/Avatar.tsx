@@ -16,8 +16,9 @@ const Avatar = () => {
       }}
     >
       <Image
+      contentFit="cover"
         style={{
-          resizeMode: "cover",
+   
           width: "100%",
           height: "100%",
         }}

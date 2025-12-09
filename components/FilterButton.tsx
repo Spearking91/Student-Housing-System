@@ -14,7 +14,7 @@ const FilterButton = () => {
         alignItems: "center",
       }}
     >
-      <MaterialIcons name="filter-list" size={24} color="black" />
+      <MaterialIcons name="filter-list" size={24} color={"#ccc"} />
     </View>
   );
 };
